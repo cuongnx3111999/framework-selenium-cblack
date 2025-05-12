@@ -1,0 +1,43 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-selenium-pytest-framework"
+version = "0.1.0"
+description = "Framework kiểm thử tự động với Selenium và Pytest"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=8.3.5",
+    "selenium>=4.32.0",
+    "webdriver-manager>=4.0.2",
+    "pytest-html>=4.1.1",
+    "pytest-xdist>=3.6.1",
+    "python-dotenv>=1.1.0",
+]
+
+# --- Thêm phần cấu hình setuptools ở đây ---
+[tool.setuptools.packages.find]
+where = ["."]  # Tìm kiếm package trong thư mục gốc (nơi có pyproject.toml)
+include = ["pages*", "locators*", "utils*"]  # Chỉ bao gồm các thư mục này và thư mục con của chúng là package
+exclude = ["tests*", "config*", "data*", "reports*"] # Loại trừ các thư mục không phải là code chính cần cài đặt
+
+# --- Cấu hình Pytest ---
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v -s --html=reports/report.html --self-contained-html -n auto"
+markers = [
+    "smoke: Các test cơ bản, quan trọng.",
+    "regression: Bộ test đầy đủ.",
+    "login: Các test liên quan đến đăng nhập.",
+    "checkout: Các test liên quan đến thanh toán.",
+]
+python_files = "test_*.py *_test.py"
+python_classes = "Test*"
+python_functions = "test_*"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
