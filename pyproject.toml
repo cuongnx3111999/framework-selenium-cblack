@@ -32,7 +32,6 @@ markers = [
     "smoke: Các test cơ bản, quan trọng.",
     "regression: Bộ test đầy đủ.",
     "login: Các test liên quan đến đăng nhập.",
-    "checkout: Các test liên quan đến thanh toán.",
 ]
 python_files = "test_*.py *_test.py"
 python_classes = "Test*"
