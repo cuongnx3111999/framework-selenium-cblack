@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="399b74d3-13a0-4c62-be57-7282d681cb97" name="Changes" comment="add: automation mode">
-      <change afterPath="$PROJECT_DIR$/automation/muasamcong-automation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locators/muasamcong_locator.py" afterDir="false" />
+    <list default="true" id="399b74d3-13a0-4c62-be57-7282d681cb97" name="Changes" comment="add: automation muasamcong">
+      <change afterPath="$PROJECT_DIR$/data/login_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_login_with_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/login_report_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/automation_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/automation_tool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/ipython_browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/ipython_browser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python\framework-selenium-cblack\tests" />
       <recent name="D:\python\framework-selenium-cblack" />
     </key>
   </component>
@@ -95,7 +95,7 @@
       <workItem from="1747242073254" duration="199000" />
       <workItem from="1747400255581" duration="8470000" />
       <workItem from="1747560004795" duration="3303000" />
-      <workItem from="1747571104383" duration="374000" />
+      <workItem from="1747571104383" duration="1566000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -113,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747219009583</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add: automation muasamcong">
+      <option name="closed" value="true" />
+      <created>1747571513424</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747571513424</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +141,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="add: automation mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: automation mode" />
+    <MESSAGE value="add: automation muasamcong" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: automation muasamcong" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
