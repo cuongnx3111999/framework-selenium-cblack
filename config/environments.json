@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "url": "https://dev.example.com",
+    "admin_user": "admin",
+    "admin_password": "admin123"
+  },
+    "test": {
+    "url": "https://www.saucedemo.com/",
+    "admin_user": "standard_user",
+    "admin_password": "secret_sauce",
+  "staging": {
+    "url": "https://staging.example.com",
+    "admin_user": "admin",
+    "admin_password": "stagingPass123"
+  },
+  "prod": {
+    "url": "https://example.com",
+    "admin_user": "admin",
+    "admin_password": "prodPass456"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "base_url": "https://example.com",
+  "timeout": 10,
+  "headless": false,
+  "screenshot_on_failure": true,
+  "default_browser": "chrome"
+}

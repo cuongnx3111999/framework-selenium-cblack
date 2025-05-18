@@ -1,0 +1,18 @@
+{
+  "chrome": {
+    "arguments": ["--start-maximized", "--disable-extensions"],
+    "preferences": {
+      "download.default_directory": "downloads"
+    }
+  },
+  "firefox": {
+    "arguments": ["-width=1920", "-height=1080"],
+    "preferences": {
+      "browser.download.folderList": 2,
+      "browser.download.dir": "downloads"
+    }
+  },
+  "edge": {
+    "arguments": ["--start-maximized"]
+  }
+}
