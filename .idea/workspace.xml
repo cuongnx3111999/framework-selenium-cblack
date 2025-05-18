@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="399b74d3-13a0-4c62-be57-7282d681cb97" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/automation/automation_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/automation/ipython_browser.py" afterDir="false" />
+    <list default="true" id="399b74d3-13a0-4c62-be57-7282d681cb97" name="Changes" comment="add: automation mode">
+      <change afterPath="$PROJECT_DIR$/automation/muasamcong-automation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locators/muasamcong_locator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/automation_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/automation_tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/ipython_browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/ipython_browser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.automation_tool.executor&quot;: &quot;Run&quot;,
     &quot;Python.create-structure.executor&quot;: &quot;Run&quot;,
+    &quot;Python.muasamcong-automation.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -87,7 +90,12 @@
       <workItem from="1747132655192" duration="2397000" />
       <workItem from="1747142637620" duration="1045000" />
       <workItem from="1747208323062" duration="336000" />
-      <workItem from="1747208710405" duration="7074000" />
+      <workItem from="1747208710405" duration="11656000" />
+      <workItem from="1747237075312" duration="401000" />
+      <workItem from="1747242073254" duration="199000" />
+      <workItem from="1747400255581" duration="8470000" />
+      <workItem from="1747560004795" duration="3303000" />
+      <workItem from="1747571104383" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -97,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747056763489</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add: automation mode">
+      <option name="closed" value="true" />
+      <created>1747219009583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747219009583</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +132,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="add: automation mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: automation mode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -130,6 +147,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/framework_selenium_cblack$muasamcong_automation.coverage" NAME="muasamcong-automation Coverage Results" MODIFIED="1747563186119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automation" />
+    <SUITE FILE_PATH="coverage/framework_selenium_cblack$automation_tool.coverage" NAME="automation_tool Coverage Results" MODIFIED="1747235529342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automation" />
     <SUITE FILE_PATH="coverage/framework_selenium_cblack$create_structure.coverage" NAME="create-structure Coverage Results" MODIFIED="1747054477080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -9,6 +9,7 @@ import sys
 import time
 import IPython
 
+URL=""
 
 def setup_ipython_environment():
     """Thiết lập môi trường IPython với các đối tượng đã khởi tạo sẵn."""
@@ -36,7 +37,7 @@ def setup_ipython_environment():
         print(f"Navigating to: {args.url}")
         driver.get(args.url)
     else:
-        base_url = env_config.get("url", "https://example.com")
+        base_url = env_config.get("url", URL)
         print(f"Navigating to base URL: {base_url}")
         driver.get(base_url)
 
@@ -78,3 +79,4 @@ if __name__ == "__main__":
             namespace['driver'].quit()
         except:
             print("Browser was already closed.")
+

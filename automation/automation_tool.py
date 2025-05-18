@@ -7,7 +7,7 @@ from utils.config_reader import ConfigReader
 from pages.base_page import BasePage
 
 
-# Import các page object khác nếu cần
+driver = None
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Automation Tool')
@@ -18,7 +18,8 @@ def parse_arguments():
 
     return parser.parse_args()
 
-def main():
+def init_driver():
+    global driver
     args = parse_arguments()
 
     # Get environment configuration
@@ -27,10 +28,18 @@ def main():
     # Initialize webdriver
     driver = DriverFactory.get_driver(args.browser, headless=False)
 
+    return driver
+
 
 
     # driver.quit()
 
+def main():
+    driver=init_driver()
+    URL="https://quanlythuoc.vss.gov.vn/kqdt"
+    driver.get(URL)
+
+    # driver.quit()
 
 if __name__ == "__main__":
     main()
