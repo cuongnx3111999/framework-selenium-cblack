@@ -18,8 +18,9 @@ class LoginPage(BasePage):
         """
         Điều hướng đến trang đăng nhập.
         """
-        env = ConfigReader.get_environment_config()
-        self.open_url(env["url"])
+        URL = "https://lab.connect247.vn/ucrm-ver3/dashboard"
+        self.open_url(URL)
+        self.wait_for_clickable(LoginLocators.btn_login).click()
         return self
 
     def login(self, username, password, capture_screenshot=False):
@@ -34,20 +35,21 @@ class LoginPage(BasePage):
         Returns:
             self để hỗ trợ chuỗi phương thức
         """
+        self.wait_for_clickable(LoginLocators.btn_login)
         # Nhập tên đăng nhập
-        self.send_keys(self.locators.USERNAME_INPUT, username)
+        self.send_keys(self.locators.username, username)
 
         if capture_screenshot:
             Screenshot.capture_screenshot(self.driver, f"login_entered_username_{username}")
 
         # Nhập mật khẩu
-        self.send_keys(self.locators.PASSWORD_INPUT, password)
+        self.send_keys(self.locators.password, password)
 
         if capture_screenshot:
             Screenshot.capture_screenshot(self.driver, "login_entered_password")
 
         # Click nút đăng nhập
-        self.click(self.locators.LOGIN_BUTTON)
+        self.click(self.locators.btn_login)
 
         if capture_screenshot:
             Screenshot.capture_screenshot(self.driver, "login_after_click")
@@ -64,29 +66,27 @@ class LoginPage(BasePage):
         Returns:
             Nội dung thông báo lỗi hoặc None nếu không có lỗi
         """
-        if self.is_displayed(self.locators.ERROR_MESSAGE):
-            return self.get_text(self.locators.ERROR_MESSAGE)
+        if self.is_displayed(self.locators.notice_error):
+            return self.get_text(self.locators.notice_error)
         return None
 
-    def is_error_displayed(self):
-        """
-        Kiểm tra xem có thông báo lỗi được hiển thị không.
+    def get_error_username(self):
+        if self.is_displayed(self.locators.explain_errors_username):
+            return self.get_text(self.locators.explain_errors_username)
+        return None
 
-        Returns:
-            True nếu thông báo lỗi được hiển thị, ngược lại là False
-        """
-        return self.is_displayed(self.locators.ERROR_MESSAGE)
+    def get_error_password(self):
+        if self.is_displayed(self.locators.explain_errors_password):
+            return self.get_text(self.locators.explain_errors_password)
+        return None
 
     def is_on_login_page(self):
         """
         Kiểm tra xem hiện tại có đang ở trang đăng nhập không.
 
-        Returns:
-            True nếu đang ở trang đăng nhập, ngược lại là False
         """
-        return (self.is_element_present(self.locators.USERNAME_INPUT) and
-                self.is_element_present(self.locators.PASSWORD_INPUT) and
-                self.is_element_present(self.locators.LOGIN_BUTTON))
+
+        return (self.is_displayed(self.locators.btn_login) and self.is_displayed(self.locators.username) and self.is_displayed(self.locators.password))==False
 
     def clear_inputs(self):
         """
@@ -95,15 +95,7 @@ class LoginPage(BasePage):
         Returns:
             self để hỗ trợ chuỗi phương thức
         """
-        self.find_element(self.locators.USERNAME_INPUT).clear()
-        self.find_element(self.locators.PASSWORD_INPUT).clear()
+        self.find_element(self.locators.username).clear()
+        self.find_element(self.locators.password).clear()
         return self
 
-    def get_page_title(self):
-        """
-        Lấy tiêu đề trang đăng nhập.
-
-        Returns:
-            Tiêu đề của trang đăng nhập
-        """
-        return self.get_text(self.locators.PAGE_TITLE)

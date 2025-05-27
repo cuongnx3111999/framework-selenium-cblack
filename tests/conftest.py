@@ -4,6 +4,7 @@ from utils.driver_factory import DriverFactory
 from utils.screenshot import Screenshot
 from utils.config_reader import ConfigReader
 import datetime
+from utils.data_loader import DataLoader
 
 
 # Định nghĩa CLI options cho pytest
@@ -15,6 +16,10 @@ def pytest_addoption(parser):
     parser.addoption("--headless", action="store_true", default=True,
                      help="Run browser in headless mode")
 
+@pytest.fixture(scope="session")
+def data_loader():
+    """Fixture để cung cấp instance của DataLoader"""
+    return DataLoader()
 
 @pytest.fixture(scope="session")
 def config(request):
