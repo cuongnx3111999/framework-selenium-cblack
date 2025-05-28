@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="399b74d3-13a0-4c62-be57-7282d681cb97" name="Changes" comment="add: automation muasamcong">
+    <list default="true" id="399b74d3-13a0-4c62-be57-7282d681cb97" name="Changes" comment="add: testcase login">
+      <change afterPath="$PROJECT_DIR$/automation/automation_login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locators/users_locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pytest_data_helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/home_locators.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/locators/login_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/login_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login_with_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login_with_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/login_report_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/login_report_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/config_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/config_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/driver_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/driver_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/pytest_data_helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pytest_data_helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/screenshot.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/screenshot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +45,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/cuongnx3111999/framework-selenium-cblack&quot;,
-    &quot;accountId&quot;: &quot;25decc5a-8abe-4a81-8f7e-63ee131171f6&quot;
+    &quot;accountId&quot;: &quot;4e6e3eee-796c-4b65-97ce-6b302565ac8f&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -71,7 +74,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -109,7 +112,10 @@
       <workItem from="1747560004795" duration="3303000" />
       <workItem from="1747571104383" duration="1566000" />
       <workItem from="1748252881556" duration="852000" />
-      <workItem from="1748320591576" duration="13374000" />
+      <workItem from="1748320591576" duration="15326000" />
+      <workItem from="1748394239452" duration="2979000" />
+      <workItem from="1748397260979" duration="20232000" />
+      <workItem from="1748421473574" duration="3020000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -135,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747571513424</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add: testcase login">
+      <option name="closed" value="true" />
+      <created>1748338119755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748338119755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +170,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="add: automation mode" />
     <MESSAGE value="add: automation muasamcong" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: automation muasamcong" />
+    <MESSAGE value="add: testcase login" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: testcase login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

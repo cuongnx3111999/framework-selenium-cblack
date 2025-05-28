@@ -29,6 +29,11 @@ exclude = ["tests*", "config*", "data*", "reports*"] # Loại trừ các thư m�
 
 # --- Cấu hình Pytest ---
 [tool.pytest.ini_options]
+env_override_existing_values = 1
+env_files = [
+    ".env.test",  # Đây sẽ là file được ưu tiên sử dụng
+    ".env"        # File này sẽ được sử dụng nếu không tìm thấy biến trong .env.test
+]
 testpaths = ["tests"]
 addopts = "-v -s --html=reports/report.html --self-contained-html -n auto"
 markers = [

@@ -20,7 +20,7 @@ class ConfigReader:
         return browsers.get(browser_name, {})
 
     @staticmethod
-    def get_environment_config(env="dev"):
+    def get_environment_config(env="test"):
         """Get environment configuration."""
         file_path = os.path.join(os.path.dirname(__file__), '../config/environments.json')
         environments = ConfigReader.load_config(file_path)

@@ -11,10 +11,6 @@ class LoginLocators:
     explain_errors_username=(By.CSS_SELECTOR, "#basic_email_help .ant-form-item-explain-error")
     explain_errors_password=(By.CSS_SELECTOR, "#basic_pass_help .ant-form-item-explain-error")
     notice_error=(By.CSS_SELECTOR,".ant-notification-notice-description")
-
-    # Demo locators cho trang web tổng quát
-    # USERNAME_INPUT = (By.ID, "username")
-    # PASSWORD_INPUT = (By.ID, "password")
-    # LOGIN_BUTTON = (By.CSS_SELECTOR, "button[type='submit']")
-    # ERROR_MESSAGE = (By.CLASS_NAME, "error-message")
-    # FORGOT_PASSWORD_LINK = (By.LINK_TEXT, "Forgot Password")
+    btn_AddLanguage=(By.CSS_SELECTOR,".language_app")
+    btn_VietNamesLanguage=(By.XPATH,"//*[contains(text(), 'Tiếng Việt')]")
+    btn_EnglishLanguage=(By.XPATH,"//*[contains(text(), 'English')]")

@@ -150,7 +150,6 @@ def filter_by_expected_result(expected_result: str):
 
 
 
-
 # def filter_by_condition(condition: Callable):
 #     """
 #     Hàm tiện ích để tạo filter function dựa trên một điều kiện tùy chỉnh

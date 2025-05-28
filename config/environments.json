@@ -5,9 +5,10 @@
     "admin_password": "admin123"
   },
     "test": {
-    "url": "https://www.saucedemo.com/",
-    "admin_user": "standard_user",
-    "admin_password": "secret_sauce",
+      "url": "https://www.saucedemo.com/",
+      "admin_user": "standard_user",
+      "admin_password": "secret_sauce"
+    },
   "staging": {
     "url": "https://staging.example.com",
     "admin_user": "admin",

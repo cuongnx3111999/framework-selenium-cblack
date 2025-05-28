@@ -8,7 +8,7 @@ from utils.config_reader import ConfigReader
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.timeout = ConfigReader.get_config_value("timeout", 10)
+        self.timeout = ConfigReader.get_config_value("timeout", 20)
 
     def open_url(self, url):
         """Open a URL."""

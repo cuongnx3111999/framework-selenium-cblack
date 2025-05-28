@@ -1,3 +1,5 @@
+from time import sleep
+
 from .base_page import BasePage
 from locators.login_locators import LoginLocators
 from utils.config_reader import ConfigReader
@@ -13,6 +15,7 @@ class LoginPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.locators = LoginLocators
+        self.timeout = ConfigReader.get_config_value("timeout", 10)
 
     def navigate_to_login_page(self):
         """
@@ -20,7 +23,9 @@ class LoginPage(BasePage):
         """
         URL = "https://lab.connect247.vn/ucrm-ver3/dashboard"
         self.open_url(URL)
-        self.wait_for_clickable(LoginLocators.btn_login).click()
+        self.wait_for_clickable(LoginLocators.btn_login,timeout=120)
+        sleep(1)
+        self.click(LoginLocators.btn_login)
         return self
 
     def login(self, username, password, capture_screenshot=False):
@@ -55,7 +60,7 @@ class LoginPage(BasePage):
             Screenshot.capture_screenshot(self.driver, "login_after_click")
 
         # Đợi một chút để chuyển trang
-        time.sleep(1)
+        time.sleep(5)
 
         return self
 
@@ -99,3 +104,14 @@ class LoginPage(BasePage):
         self.find_element(self.locators.password).clear()
         return self
 
+    def choiseLanguange(self,languange='English'):
+        self.wait_for_clickable(self.locators.btn_AddLanguage).click()
+        sleep(1)
+        if languange == 'English':
+            self.wait_for_clickable(self.locators.btn_EnglishLanguage).click()
+        else:
+            self.wait_for_clickable(self.locators.btn_VietNamesLanguage).click()
+
+    def checkHidePassword(self,password=""):
+        self.click(self.locators.icon_eye_invisible)
+        return password==self.find_element(self.locators.password).get_attribute('value')
